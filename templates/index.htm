@@ -1,0 +1,91 @@
+{% extends 'base.htm'%}
+{% block title %}
+Progress Report
+{% endblock title %}
+
+{% block body %}
+
+<div class="table-responsive" style="width:100%">
+  <table id="bootstrapdatatable" class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">District</th>
+      <th scope="col">Location Name</th>
+      <th scope="col"> DC Name</th>
+      <th scope="col">Day 1 SD</th>
+      <th scope="col">Day 1 FIR</th>
+      <th scope="col">Day 2 SD</th>
+      <th scope="col">Day 2 FIR</th>
+      <th scope="col">Day 3 SD</th>
+      <th scope="col">Day 3 FIR</th>
+      <th scope="col">Day 4 SD</th>
+      <th scope="col">Day 4 FIR</th>
+      <th scope="col">Day 5 SD</th>
+      <th scope="col">Day 5 FIR</th>
+      <th scope="col">Day 6 SD</th>
+      <th scope="col">Day 6 FIR</th>
+      <th scope="col">Day 7 SD</th>
+      <th scope="col">Day 7 FIR</th>
+      <th scope="col">Day 8 SD</th>
+      <th scope="col">Day 8 FIR</th>
+      <th scope="col">Day 9 SD</th>
+      <th scope="col">Day 9 FIR</th>
+      <th scope="col">Day 10 SD</th>
+      <th scope="col">Day 10 FIR</th>
+      <th scope="col">Day 11 SD</th>
+      <th scope="col">Day 11 FIR</th>
+      <th scope="col">Day 12 FIR</th>
+      <th scope="col">Day 12 SD</th>
+      <th scope="col">Day 13 FIR</th>
+      <th scope="col">Day 13 SD</th>
+      <th scope="col">Day 14 FIR</th>
+      <th scope="col">Day 14 SD</th>
+      <th scope="col">Day 15 FIR</th>
+      <th scope="col">Day 15 SD</th>
+      <th scope="col">Other_Entry</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for res in total_entry %}
+    <tr>
+      <td>{{res.district_name}}</td>
+      <td>{{res.loc_name}}</td>
+      <td>{{res.dc_name}}</td>
+      <td>{{res.day1sd}}</td>
+      <td>{{res.day01fir}}</td>
+      <td>{{res.day02sd}}</td>
+      <td>{{res.day02fir}}</td>
+       <td>{{res.day03sd}}</td>
+      <td>{{res.day03fir}}</td>
+      <td>{{res.day04sd}}</td>
+      <td>{{res.day04fir}}</td>
+      <td>{{res.day05sd}}</td>
+      <td>{{res.day05fir}}</td>
+      <td>{{res.day06sd}}</td>
+      <td>{{res.day06fir}}</td>
+       <td>{{res.day07sd}}</td>
+      <td>{{res.day07fir}}</td>
+      <td>{{res.day08sd}}</td>
+      <td>{{res.day08fir}}</td>
+       <td>{{res.day09sd}}</td>
+       <td>{{res.day09fir}}</td>
+       <td>{{res.day10sd}}</td>
+      <td>{{res.day10fir}}</td>
+      <td>{{res.day11sd}}</td>
+      <td>{{res.day11fir}}</td>
+       <td>{{res.day12sd}}</td>
+      <td>{{res.day12fir}}</td>
+      <td>{{res.day13sd}}</td>
+      <td>{{res.day13fir}}</td>
+      <td>{{res.day14sd}}</td>
+      <td>{{res.day14fir}}</td>
+      <td>{{res.day15sd}}</td>
+      <td>{{res.day15fir}}</td>
+      <td>{{res.other_entry}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock body %}
