@@ -12,7 +12,6 @@ def index(request):
         return redirect('/loginuser')
 
     tot_entry=TotalEntry.objects.all()
-    print(tot_entry[0].day01fir)
     context={
         'total_entry':tot_entry,
         'time':datetime.now()
@@ -23,9 +22,7 @@ def loginuser(request):
     if request.method=='POST':
         username=request.POST.get('username')
         pwd=request.POST.get('passwd')
-        print(username,pwd)
         user=authenticate(username=username,password=pwd)
-        print(user)
         if user is not None:
             login(request,user)
             return redirect('/')
