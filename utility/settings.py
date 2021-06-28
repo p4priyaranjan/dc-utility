@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-eqs*jhr4ops=)f!$vo4^3^mo(7rruso@x=@52$8&hbb!6&f%!c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://dc-utility.herokuapp.com']
 
 
 # Application definition
