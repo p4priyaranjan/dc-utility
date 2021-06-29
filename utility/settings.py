@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-eqs*jhr4ops=)f!$vo4^3^mo(7rruso@x=@52$8&hbb!6&f%!c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['https://dc-utility.herokuapp.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['https://utility-dc.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'utility.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', #--'django.db.backends.sqlite3'
-        'NAME': 'UTILITY_DB', # The Server name from 1.5  -- BASE_DIR / 'db.sqlite3',
+        'NAME': 'DC_UTILITY_DB', # The Server name from 1.5  -- BASE_DIR / 'db.sqlite3',
         'USER': 'postgres', # The username from 1.6
         'PASSWORD': 'Python@123456', # The password from installation
         'HOST': 'localhost', # Host name/address from 1.6
