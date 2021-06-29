@@ -12,7 +12,6 @@ def index(request):
         return redirect('/loginuser')
 
     tot_entry=TotalEntry.objects.all()
-    print(tot_entry[0].day01fir)
     context={
         'total_entry':tot_entry,
         'time':datetime.now()

@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class TotalEntry(models.Model):
+    id = models.IntegerField(db_column='Id', primary_key=True)  # Field name made lowercase.
     district_name = models.TextField(blank=True, null=True)
     loc_name = models.TextField(blank=True, null=True)
     dc_name = models.TextField(blank=True, null=True)
