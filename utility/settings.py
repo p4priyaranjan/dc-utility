@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-eqs*jhr4ops=)f!$vo4^3^mo(7rruso@x=@52$8&hbb!6&f%!c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://utility-dc.herokuapp.com','localhost','127.0.0.1']
 
@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['https://utility-dc.herokuapp.com','localhost','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -125,20 +126,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
+STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 # Added Manually priyaranjan
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     ]
+# django_heroku.settings(locals())
 
-django_heroku.settings(locals())
 
 
