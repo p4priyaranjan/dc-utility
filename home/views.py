@@ -23,7 +23,6 @@ def loginuser(request):
         username=request.POST.get('username')
         pwd=request.POST.get('passwd')
         user=authenticate(username=username,password=pwd)
-        print(user)
         if user is not None:
             login(request,user)
             return redirect('/')
