@@ -42,3 +42,14 @@ class TotalEntry(models.Model):
     class Meta:
         managed = False
         db_table = 'Total_Entry'
+
+
+class Versionstatus(models.Model):
+    id = models.IntegerField(primary_key=True)
+    district = models.TextField(blank=True, null=True)
+    policestation = models.TextField(blank=True, null=True)
+    version = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'versionstatus'
